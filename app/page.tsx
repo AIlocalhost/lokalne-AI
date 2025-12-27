@@ -8,7 +8,7 @@ export default function Home() {
 
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
-  // KLUCZOWY MODUŁ: Definicja obiektu theme (Naprawia ReferenceError)
+  // NAPRAWA: Definicja theme musi być tutaj!
   const theme = {
     bg: isDarkMode ? 'bg-[#050505]' : 'bg-[#fbfbfd]',
     text: isDarkMode ? 'text-[#f5f5f7]' : 'text-[#1d1d1f]',
@@ -32,7 +32,6 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen ${theme.bg} ${theme.text} font-sans transition-colors duration-500`}>
-      
       <nav className={`fixed top-0 w-full z-50 backdrop-blur-xl border-b ${theme.navBg}`}>
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 h-16 sm:h-20 flex justify-between items-center">
           <div className="flex items-center gap-3">
@@ -50,8 +49,7 @@ export default function Home() {
       <main className="pt-24 sm:pt-32 pb-20 px-4 sm:px-6 max-w-[1200px] mx-auto">
         <div className="mb-12 sm:mb-20">
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter leading-[1.0] mb-6">
-              <span className="text-blue-600">P</span>otęga jest<br/>
-              lokalna.
+              <span className="text-blue-600">P</span>otęga jest<br/>lokalna.
             </h1>
             <p className={`text-lg sm:text-xl max-w-xl leading-relaxed ${theme.textMuted}`}>
                 Prywatne modele AI uruchamiane na Twoim własnym sprzęcie. 
